@@ -73,6 +73,51 @@
     #about .section-title { color: #000000; }
     #about .section-subtitle { color: #666666; }
 
+    /* CSS สำหรับจัด Layout รูปคู่กับข้อความ */
+    .about-container {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        max-width: 1100px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .about-image {
+        flex: 1;
+        max-width: 400px;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px; /* ทำมุมโค้งเหมือนในรูปตัวอย่าง */
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+
+    .about-text {
+        flex: 1.5;
+        text-align: left; /* จัดข้อความชิดซ้ายแบบในรูป */
+    }
+
+    /* สไตล์ปุ่มแบบไล่เฉดสีเหมือนในรูปตัวอย่าง */
+    .btn-cv {
+        background: linear-gradient(90deg, #a1c4fd 0%, #c2e9fb 100%);
+        color: #333;
+        padding: 12px 25px;
+        border-radius: 10px;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 20px;
+        box-shadow: 0 4px 15px rgba(161, 196, 253, 0.4);
+    }
+
+    /* ปรับปรุงให้ดูดีบนมือถือ */
+    @media (max-width: 768px) {
+        .about-container { flex-direction: column; text-align: center; }
+        .about-text { text-align: center; }
+    }
+
     /* --- [3] PROJECTS SECTION (เปลี่ยนเป็นโทนสว่าง/เทาอ่อน) --- */
     #projects { 
         background-color: #f9f9f9; /* พื้นหลังเทาอ่อนมาก */
@@ -124,11 +169,26 @@
         </section>
 
         <section id="about">
-            <h2 class="section-title">About</h2>
-            <p class="section-subtitle" style="text-align: left; line-height: 1.8;">
-            Hi! I'm <strong>Phurinat</strong>, a 3rd-year Digital Game student at CAMT, Chiang Mai University.<br>
-            I'm a <strong>Game Developer</strong> who lives for technical challenges and creative problem-solving through code and game logic.
-            </p>
+            <div class="about-container">
+                
+                <div class="about-text">
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">About</h2>
+                    <p style="line-height: 1.8; color: #555;">
+                        Hi! I'm <strong>Phurinat</strong>, a 3rd-year Digital Game student at CAMT, Chiang Mai University. 
+                        I'm a <strong>Game Developer</strong> who lives for technical challenges and creative problem-solving through code and game logic.
+                    </p>
+                    <p style="line-height: 1.8; color: #555;">
+                        I am skilled in game programming (Unity C#), web development, and interactive media. 
+                        My goal is to create seamless and impactful digital experiences.
+                    </p>
+                    <a href="#" class="btn-cv">Click here to view my CV</a>
+                </div>
+
+                <div class="about-image">
+                    <img src="your-photo.jpg" alt="Phurinat's Photo"> 
+                    </div>
+
+            </div>
         </section>
 
         <section id="projects">
