@@ -206,48 +206,97 @@
     #contact .section-title { color: white; }
     .contact-links a { color: #fff; border-bottom: 1px dashed #555; }
 
-        /* สไตล์หน้าต่าง Modal */
+        /* --- สไตล์หน้าต่าง Modal (บังคับเป็นสี่เหลี่ยมจัตุรัส) --- */
 .modal {
-    display: none; /* ซ่อนไว้ก่อน */
+    display: none;
     position: fixed;
     z-index: 2000;
     left: 0; top: 0;
     width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.8); /* พื้นหลังโปร่งแสงสีดำ */
+    background-color: rgba(0,0,0,0.85); /* พื้นหลังดำเข้มขึ้นเพื่อให้ดูโฟกัส */
     overflow: auto;
 }
 
 .modal-content {
     background-color: #fff;
-    margin: 5% auto;
-    padding: 30px;
-    border-radius: 15px;
-    max-width: 800px;
+    margin: 3% auto; /* ขยับขึ้นด้านบนอีกนิด */
+    border-radius: 20px;
+    
+    /* บังคับเป็นสี่เหลี่ยมจัตุรัส */
+    max-width: 650px; 
     width: 90%;
+    aspect-ratio: 1 / 1; /* ความกว้างและสูงเท่ากันเป๊ะ */
+    
     position: relative;
     color: #333;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* กั้นเนื้อหาไม่ให้หลุดขอบจัตุรัส */
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
 }
 
 .close-btn {
     position: absolute;
-    right: 20px; top: 10px;
-    font-size: 30px; cursor: pointer;
+    right: 20px; top: 15px;
+    font-size: 35px; cursor: pointer;
+    color: #fff; /* ปุ่มปิดสีขาวเพื่อให้เด่นบนวิดีโอ */
+    z-index: 100;
+    text-shadow: 0 0 10px rgba(0,0,0,1);
 }
 
-.modal-title { border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px; }
+/* ส่วนวิดีโอ (กินพื้นที่ด้านบน 60%) */
+.video-container { 
+    height: 60%; 
+    background: #000; 
+    position: relative;
+}
 
-.video-container { margin-bottom: 20px; background: #000; border-radius: 10px; overflow: hidden; }
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
 
-.tag { background: #eee; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; margin-right: 5px; }
+/* ส่วนรายละเอียด (กินพื้นที่ด้านล่าง 40% และสกอล์ดูได้) */
+.modal-details-container {
+    height: 40%;
+    padding: 30px;
+    overflow-y: auto; /* ถ้าข้อความยาวจะเลื่อนดูได้ภายในจัตุรัส */
+    text-align: left;
+}
+
+.modal-title { 
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.tag { 
+    background: #f0f0f0; 
+    padding: 6px 15px; 
+    border-radius: 50px; 
+    font-size: 0.85rem; 
+    margin-right: 8px; 
+    color: #444;
+    font-weight: bold;
+}
 
 .btn-github {
     display: inline-block;
-    background: #24292e; color: #fff;
-    padding: 12px 20px; border-radius: 5px;
-    margin-top: 20px; font-weight: bold;
+    background: #121212; 
+    color: #fff;
+    padding: 12px 25px; 
+    border-radius: 8px;
+    margin-top: 20px; 
+    font-weight: bold;
+    transition: 0.3s;
 }
-.btn-github:hover { background: #444; }
+
+.btn-github:hover {
+    background: #444;
+    transform: translateY(-2px);
+}
 
 </style>
 </head>
