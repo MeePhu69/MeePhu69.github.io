@@ -45,7 +45,7 @@
             text-align: center; 
         }
 
-        /* --- [1] HOME SECTION (Dark Theme) --- */
+        /* --- [1] HOME SECTION --- */
         #home { 
             background: radial-gradient(circle, #333 0%, #121212 100%); 
             color: white; 
@@ -66,7 +66,7 @@
         }
         .btn-explore:hover { background-color: white; color: #121212; }
 
-        /* --- [2] ABOUT SECTION (Light Theme + Layout) --- */
+        /* --- [2] ABOUT SECTION --- */
         #about { 
             background-color: #ffffff;
             color: #333333;
@@ -91,7 +91,6 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
         }
 
-        /* Resume Button (Black Outline) */
         .btn-resume {
             background-color: transparent;
             color: #333333;
@@ -105,7 +104,6 @@
         }
         .btn-resume:hover { background-color: #333333; color: #ffffff; }
 
-        /* Profile & Skills Grid */
         .about-extra-container {
             max-width: 1100px;
             width: 100%;
@@ -132,7 +130,7 @@
             border-radius: 5px; text-align: center; font-weight: bold; font-size: 0.9rem;
         }
 
-        /* --- [3] PROJECTS SECTION (Light Gray Theme) --- */
+        /* --- [3] PROJECTS SECTION --- */
         #projects { background-color: #f9f9f9; padding: 80px 50px; }
         .project-grid { 
             display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
@@ -146,7 +144,7 @@
         .project-card img { width: 100%; height: 200px; object-fit: cover; }
         .project-card-content { padding: 20px; }
 
-        /* --- [4] MODAL SYSTEM --- */
+        /* --- [4] MODAL SYSTEM (จัดกึ่งกลางปุ่มและ Tags) --- */
         .modal {
             display: none; position: fixed; z-index: 2000;
             left: 0; top: 0; width: 100%; height: 100%;
@@ -159,21 +157,51 @@
         .close-btn {
             position: absolute; right: 20px; top: 10px;
             font-size: 35px; cursor: pointer; color: #fff; z-index: 10;
+            text-shadow: 0 0 10px rgba(0,0,0,0.5);
         }
         .video-container { width: 100%; background: #000; line-height: 0; }
-        .modal-details-container { padding: 30px; text-align: left; }
-        .tag { background: #eee; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; margin-right: 5px; }
-        .btn-github {
-            display: inline-block; background: #24292e; color: #fff;
-            padding: 12px 20px; border-radius: 5px; margin-top: 20px; font-weight: bold;
+        .modal-details-container { 
+            padding: 30px; 
+            text-align: left; 
+            display: flex;
+            flex-direction: column;
         }
+        
+        /* จัดส่วนปุ่มและ Tag ให้อยู่กึ่งกลาง */
+        .modal-footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* จัดกึ่งกลางแนวตั้งสำหรับลูกๆ */
+            margin-top: 25px;
+            width: 100%;
+        }
+
+        .tech-tags { 
+            display: flex; 
+            justify-content: center; 
+            gap: 10px; 
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .tag { background: #eee; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; color: #333; }
+        
+        .btn-github {
+            display: inline-block; 
+            background: #24292e; 
+            color: #fff;
+            padding: 12px 30px; 
+            border-radius: 5px; 
+            font-weight: bold;
+            transition: 0.3s;
+            text-align: center;
+        }
+        .btn-github:hover { background: #444; }
 
         /* --- [5] CONTACT SECTION --- */
         #contact { background-color: #121212; color: white; padding: 80px 50px; }
         .contact-links { display: flex; gap: 40px; margin-top: 30px; }
         .contact-links a { color: #fff; border-bottom: 1px dashed #555; }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .about-main-container { flex-direction: column-reverse; text-align: center; }
             .about-text { text-align: center; }
@@ -244,7 +272,7 @@
                         <p>Arcade - Unity (C#)</p>
                     </div>
                 </div>
-                </div>
+            </div>
         </section>
 
         <div id="modal-fart-life" class="modal">
@@ -261,11 +289,14 @@
                         <li>AI Farting</li>
                         <li>Mask & Stamina System</li>
                     </ul>
-                    <div style="margin-top: 20px;">
-                        <span class="tag">Unity</span>
-                        <span class="tag">Lead Programmer</span>
+                    
+                    <div class="modal-footer">
+                        <div class="tech-tags">
+                            <span class="tag">Unity</span>
+                            <span class="tag">Lead Programmer</span>
+                        </div>
+                        <a href="https://github.com/MeePhu69/FartLife.git" target="_blank" class="btn-github">Explore on GitHub</a>
                     </div>
-                    <a href="https://github.com/MeePhu69/FartLife.git" target="_blank" class="btn-github">Explore on GitHub</a>
                 </div>
             </div>
         </div>
