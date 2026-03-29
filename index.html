@@ -1,440 +1,394 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phurinat Wattanateerakul - Portfolio</title>
-    <style>
-    /* --- CSS Reset & Basic Styles --- */
-    body { 
-        margin: 0; 
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-        scroll-behavior: smooth; 
-        background-color: #ffffff; /* พื้นหลังหลักเป็นสีขาว */
-    }
-    a { text-decoration: none; transition: 0.3s; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phurinat Wattanateerakul - Portfolio</title>
+    <style>
+    /* --- CSS Reset & Basic Styles --- */
+    body { 
+        margin: 0; 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        scroll-behavior: smooth; 
+        background-color: #ffffff; /* พื้นหลังหลักเป็นสีขาว */
+    }
+    a { text-decoration: none; transition: 0.3s; }
 
-    /* --- Navigation Bar (โทนเข้มแบบเดิม) --- */
-    .navbar { 
-        background-color: rgba(18, 18, 18, 0.95); 
-        color: #ffffff; 
-        padding: 15px 50px; 
-        display: flex; 
-        justify-content: space-between; 
-        align-items: center; 
-        position: fixed; 
-        top: 0; 
-        width: 100%; 
-        z-index: 1000; 
-        box-sizing: border-box; 
-        border-bottom: 1px solid #333;
-    }
-    .nav-logo { font-size: 1.5rem; font-weight: bold; color: #fff; }
-    .nav-links { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; }
-    .nav-links a { color: #ccc; }
-    .nav-links a:hover { color: #fff; }
+    /* --- Navigation Bar (โทนเข้มแบบเดิม) --- */
+    .navbar { 
+        background-color: rgba(18, 18, 18, 0.95); 
+        color: #ffffff; 
+        padding: 15px 50px; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        position: fixed; 
+        top: 0; 
+        width: 100%; 
+        z-index: 1000; 
+        box-sizing: border-box; 
+        border-bottom: 1px solid #333;
+    }
+    .nav-logo { font-size: 1.5rem; font-weight: bold; color: #fff; }
+    .nav-links { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; }
+    .nav-links a { color: #ccc; }
+    .nav-links a:hover { color: #fff; }
 
-    /* --- Section Common Styles --- */
-    section { 
-        padding: 100px 50px; 
-        min-height: 80vh; 
-        display: flex; 
-        flex-direction: column; 
-        justify-content: center; 
-        align-items: center; 
-        text-align: center; 
-    }
+    /* --- Section Common Styles --- */
+    section { 
+        padding: 100px 50px; 
+        min-height: 80vh; 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        text-align: center; 
+    }
 
-    /* --- [1] HOME SECTION (โทนเข้มแบบเดิม) --- */
-    #home { 
-        background: radial-gradient(circle, #333 0%, #121212 100%); 
-        color: white; 
-        min-height: 100vh;
-    }
-    #home .section-title { color: #ffffff; font-size: 3.5rem; }
-    #home .section-subtitle { color: #aaa; }
-    .btn-explore { 
-        background-color: transparent; 
-        color: white; 
-        padding: 12px 30px; 
-        border: 2px solid white; 
-        border-radius: 5px; 
-        font-weight: bold; 
-        margin-top: 20px; 
-        display: inline-block; 
-    }
-    .btn-explore:hover { background-color: white; color: #121212; }
+    /* --- [1] HOME SECTION (โทนเข้มแบบเดิม) --- */
+    #home { 
+        background: radial-gradient(circle, #333 0%, #121212 100%); 
+        color: white; 
+        min-height: 100vh;
+    }
+    #home .section-title { color: #ffffff; font-size: 3.5rem; }
+    #home .section-subtitle { color: #aaa; }
+    .btn-explore { 
+        background-color: transparent; 
+        color: white; 
+        padding: 12px 30px; 
+        border: 2px solid white; 
+        border-radius: 5px; 
+        font-weight: bold; 
+        margin-top: 20px; 
+        display: inline-block; 
+    }
+    .btn-explore:hover { background-color: white; color: #121212; }
 
-    /* เปลี่ยนชื่อจาก .btn-cv เป็น .btn-resume */
-    .btn-resume {
-        background-color: transparent;
-        color: #333333;
-        padding: 12px 30px;
-        border: 2px solid #333333;
-        border-radius: 5px;
-        font-weight: bold;
-        display: inline-block;
-        margin-top: 20px;
-        transition: 0.3s;
-        cursor: pointer;
-    }
+    /* เปลี่ยนชื่อจาก .btn-cv เป็น .btn-resume */
+    .btn-resume {
+        background-color: transparent;
+        color: #333333;
+        padding: 12px 30px;
+        border: 2px solid #333333;
+        border-radius: 5px;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 20px;
+        transition: 0.3s;
+        cursor: pointer;
+    }
 
-    /* อย่าลืมเปลี่ยนชื่อตรง :hover ด้วยนะครับ */
-    .btn-resume:hover {
-        background-color: #333333;
-        color: #ffffff;
-    }
+    /* อย่าลืมเปลี่ยนชื่อตรง :hover ด้วยนะครับ */
+    .btn-resume:hover {
+        background-color: #333333;
+        color: #ffffff;
+    }
 
-    /* --- [2] ABOUT SECTION (ปรับปรุงใหม่) --- */
-    #about { 
-        background-color: #ffffff;
-        color: #333333;
-        /* --- จุดที่ 1: ขยับขึ้น --- */
-        padding: 50px 50px; /* ลด Padding บน-ล่าง จาก 100px เหลือ 50px */
-        min-height: auto; /* ไม่บังคับความสูงขั้นต่ำ เพื่อให้หน้ายืดหดตามเนื้อหา */
-    }
+    /* --- [2] ABOUT SECTION (ปรับปรุงใหม่) --- */
+    #about { 
+        background-color: #ffffff;
+        color: #333333;
+        /* --- จุดที่ 1: ขยับขึ้น --- */
+        padding: 50px 50px; /* ลด Padding บน-ล่าง จาก 100px เหลือ 50px */
+        min-height: auto; /* ไม่บังคับความสูงขั้นต่ำ เพื่อให้หน้ายืดหดตามเนื้อหา */
+    }
 
-    .about-main-container {
-        display: flex;
-        align-items: center;
-        gap: 50px;
-        max-width: 1100px;
-        width: 100%;
-        margin: 0 auto 50px auto; /* เพิ่ม Margin ด้านล่างเพื่อเว้นระยะกับส่วน Skills */
-    }
+    .about-main-container {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        max-width: 1100px;
+        width: 100%;
+        margin: 0 auto 50px auto; /* เพิ่ม Margin ด้านล่างเพื่อเว้นระยะกับส่วน Skills */
+    }
 
-    .about-image {
-        flex: 1;
-        max-width: 350px; /* ลดขนาดรูปลงนิดหน่อยเพื่อให้สมดุลกับเนื้อหาใหม่ */
-    }
+    .about-image {
+        flex: 1;
+        max-width: 350px; /* ลดขนาดรูปลงนิดหน่อยเพื่อให้สมดุลกับเนื้อหาใหม่ */
+    }
 
-    .about-image img {
-        width: 100%;
-        height: auto;
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
+    .about-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
 
-    .about-text {
-        flex: 1.5;
-        text-align: left;
-    }
+    .about-text {
+        flex: 1.5;
+        text-align: left;
+    }
 
-    .about-text p {
-        line-height: 1.8;
-        color: #555;
-        margin-bottom: 15px;
-    }
+    .about-text p {
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 15px;
+    }
 
-    /* --- สไตล์สำหรับส่วนเนื้อหาเพิ่มเติม (Profile & Skills) --- */
-    .about-extra-container {
-        max-width: 1100px;
-        width: 100%;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* แบ่งเป็น 2 คอลัมน์ (Profile และ Skills) */
-        gap: 40px;
-        text-align: left;
-    }
+    /* --- สไตล์สำหรับส่วนเนื้อหาเพิ่มเติม (Profile & Skills) --- */
+    .about-extra-container {
+        max-width: 1100px;
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* แบ่งเป็น 2 คอลัมน์ (Profile และ Skills) */
+        gap: 40px;
+        text-align: left;
+    }
 
-    .extra-box h3 {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
-        color: #000;
-        border-bottom: 2px solid #333; /* เพิ่มเส้นใต้หัวข้อให้ดูเท่แบบในตัวอย่าง */
-        display: inline-block;
-        padding-bottom: 5px;
-    }
+    .extra-box h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        color: #000;
+        border-bottom: 2px solid #333; /* เพิ่มเส้นใต้หัวข้อให้ดูเท่แบบในตัวอย่าง */
+        display: inline-block;
+        padding-bottom: 5px;
+    }
 
-    /* สไตล์สำหรับ My Skills */
-    .skills-list {
-        list-style: none;
-        padding: 0;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* จัดเรียง Skill เป็น Grid */
-        gap: 15px;
-    }
+    /* สไตล์สำหรับ My Skills */
+    .skills-list {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* จัดเรียง Skill เป็น Grid */
+        gap: 15px;
+    }
 
-    .skills-list li {
-        background-color: #f4f4f4; /* พื้นหลัง Skill สีเทาอ่อน */
-        padding: 10px 15px;
-        border-radius: 5px;
-        text-align: center;
-        font-weight: bold;
-        color: #333;
-        transition: 0.3s;
-    }
+    .skills-list li {
+        background-color: #f4f4f4; /* พื้นหลัง Skill สีเทาอ่อน */
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: bold;
+        color: #333;
+        transition: 0.3s;
+    }
 
-    .skills-list li:hover {
-        background-color: #333; /* เวลาชี้เปลี่ยนเป็นสีดำ */
-        color: #fff;
-    }
+    .skills-list li:hover {
+        background-color: #333; /* เวลาชี้เปลี่ยนเป็นสีดำ */
+        color: #fff;
+    }
 
-    /* ปรับปรุงให้ดูดีบนมือถือ */
-    @media (max-width: 768px) {
-        .about-main-container { flex-direction: column-reverse; text-align: center; gap: 30px; }
-        .about-text { text-align: center; }
-        .about-extra-container { grid-template-columns: 1fr; } /* บนมือถือให้เรียงต่อกันเป็นแนวตั้ง */
-    }
-    /* --- [3] PROJECTS SECTION (เปลี่ยนเป็นโทนสว่าง/เทาอ่อน) --- */
-    #projects { 
-        background-color: #f9f9f9; /* พื้นหลังเทาอ่อนมาก */
-        color: #333333; 
-    }
-    #projects .section-title { color: #000000; }
-    
-    /* ปรับแต่งการ์ดโปรเจกต์ให้เข้ากับโทนสว่าง */
-    .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; width: 100%; max-width: 1200px; }
-    .project-card { 
-        background: #ffffff; 
-        border-radius: 10px; 
-        overflow: hidden; 
-        border: 1px solid #e0e0e0; 
-        text-align: left; 
-        transition: 0.3s; 
-    }
-    .project-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-    .project-card h3 { color: #000000; margin-bottom: 10px; }
-    .project-card p { color: #666666; font-size: 0.95rem; }
-    .project-card img { width: 100%; height: 200px; object-fit: cover; }
+    /* ปรับปรุงให้ดูดีบนมือถือ */
+    @media (max-width: 768px) {
+        .about-main-container { flex-direction: column-reverse; text-align: center; gap: 30px; }
+        .about-text { text-align: center; }
+        .about-extra-container { grid-template-columns: 1fr; } /* บนมือถือให้เรียงต่อกันเป็นแนวตั้ง */
+    }
+    /* --- [3] PROJECTS SECTION (เปลี่ยนเป็นโทนสว่าง/เทาอ่อน) --- */
+    #projects { 
+        background-color: #f9f9f9; /* พื้นหลังเทาอ่อนมาก */
+        color: #333333; 
+    }
+    #projects .section-title { color: #000000; }
+    
+    /* ปรับแต่งการ์ดโปรเจกต์ให้เข้ากับโทนสว่าง */
+    .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; width: 100%; max-width: 1200px; }
+    .project-card { 
+        background: #ffffff; 
+        border-radius: 10px; 
+        overflow: hidden; 
+        border: 1px solid #e0e0e0; 
+        text-align: left; 
+        transition: 0.3s; 
+    }
+    .project-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .project-card h3 { color: #000000; margin-bottom: 10px; }
+    .project-card p { color: #666666; font-size: 0.95rem; }
+    .project-card img { width: 100%; height: 200px; object-fit: cover; }
 
-    /* --- [4] CONTACT SECTION (กลับมาโทนเข้มเพื่อปิดท้าย) --- */
-    #contact { 
-        background-color: #121212; 
-        color: white; 
-    }
-    #contact .section-title { color: white; }
-    .contact-links a { color: #fff; border-bottom: 1px dashed #555; }
+    /* --- [4] CONTACT SECTION (กลับมาโทนเข้มเพื่อปิดท้าย) --- */
+    #contact { 
+        background-color: #121212; 
+        color: white; 
+    }
+    #contact .section-title { color: white; }
+    .contact-links a { color: #fff; border-bottom: 1px dashed #555; }
 
-        /* --- สไตล์หน้าต่าง Modal (บังคับเป็นสี่เหลี่ยมจัตุรัส) --- */
+        /* สไตล์หน้าต่าง  */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.85); /* พื้นหลังดำเข้มขึ้นเพื่อให้ดูโฟกัส */
-    overflow: auto;
+    display: none; /* ซ่อนไว้ก่อน */
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.8); /* พื้นหลังโปร่งแสงสีดำ */
+    overflow: auto;
 }
 
 .modal-content {
-    background-color: #fff;
-    margin: 3% auto; /* ขยับขึ้นด้านบนอีกนิด */
-    border-radius: 20px;
-    
-    /* บังคับเป็นสี่เหลี่ยมจัตุรัส */
-    max-width: 650px; 
-    width: 90%;
-    aspect-ratio: 1 / 1; /* ความกว้างและสูงเท่ากันเป๊ะ */
-    
-    position: relative;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden; /* กั้นเนื้อหาไม่ให้หลุดขอบจัตุรัส */
-    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+    color: #333;
+    text-align: left;
 }
 
 .close-btn {
-    position: absolute;
-    right: 20px; top: 15px;
-    font-size: 35px; cursor: pointer;
-    color: #fff; /* ปุ่มปิดสีขาวเพื่อให้เด่นบนวิดีโอ */
-    z-index: 100;
-    text-shadow: 0 0 10px rgba(0,0,0,1);
+    position: absolute;
+    right: 20px; top: 10px;
+    font-size: 30px; cursor: pointer;
 }
 
-/* ส่วนวิดีโอ (กินพื้นที่ด้านบน 60%) */
-.video-container { 
-    height: 60%; 
-    background: #000; 
-    position: relative;
-}
+.modal-title { border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px; }
 
-.video-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
+.video-container { margin-bottom: 20px; background: #000; border-radius: 10px; overflow: hidden; }
 
-/* ส่วนรายละเอียด (กินพื้นที่ด้านล่าง 40% และสกอล์ดูได้) */
-.modal-details-container {
-    height: 40%;
-    padding: 30px;
-    overflow-y: auto; /* ถ้าข้อความยาวจะเลื่อนดูได้ภายในจัตุรัส */
-    text-align: left;
-}
-
-.modal-title { 
-    font-size: 1.8rem;
-    margin-top: 0;
-    margin-bottom: 15px;
-    color: #000;
-}
-
-.tag { 
-    background: #f0f0f0; 
-    padding: 6px 15px; 
-    border-radius: 50px; 
-    font-size: 0.85rem; 
-    margin-right: 8px; 
-    color: #444;
-    font-weight: bold;
-}
+.tag { background: #eee; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; margin-right: 5px; }
 
 .btn-github {
-    display: inline-block;
-    background: #121212; 
-    color: #fff;
-    padding: 12px 25px; 
-    border-radius: 8px;
-    margin-top: 20px; 
-    font-weight: bold;
-    transition: 0.3s;
+    display: inline-block;
+    background: #24292e; color: #fff;
+    padding: 12px 20px; border-radius: 5px;
+    margin-top: 20px; font-weight: bold;
 }
-
-.btn-github:hover {
-    background: #444;
-    transform: translateY(-2px);
-}
+.btn-github:hover { background: #444; }
 
 </style>
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-logo">Phurinat W.</div> <ul class="nav-links"> <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <nav class="navbar">
+        <div class="nav-logo">Phurinat W.</div> <ul class="nav-links"> <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <main class="main-content">
+    <main class="main-content">
 
-        <section id="home">
-            <h1 class="section-title">Hello, I'm Phurinat Wattanateerakul</h1>
-            <p class="section-subtitle">Game Developer</p>
-            <a href="#projects" class="btn-explore">Explore My Work</a>
-        </section>
+        <section id="home">
+            <h1 class="section-title">Hello, I'm Phurinat Wattanateerakul</h1>
+            <p class="section-subtitle">Game Developer</p>
+            <a href="#projects" class="btn-explore">Explore My Work</a>
+        </section>
 
-        <section id="about">
-            <div class="about-main-container">
-                <div class="about-text">
-                    <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">About Me</h2>
-                    <p>
-                        Hi! I'm <strong>Phurinat</strong>, a 3rd-year Digital Game student at CAMT, Chiang Mai University. 
-                        I'm a <strong>Game Developer</strong> who lives for technical challenges and creative problem-solving through code and game logic.
-                    </p>
-                    <p>
-                        I love diving deep into game engines, mastering Unity, and building smooth, high-performance gameplay experiences. 
-                        I'm always eager to push my technical boundaries—whether it’s architecting complex systems or experimenting with new development methodologies.
-                    </p>
-                    <a href="#" class="btn-resume">View My Resume</a>
-                </div>
+        <section id="about">
+            <div class="about-main-container">
+                <div class="about-text">
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">About Me</h2>
+                    <p>
+                        Hi! I'm <strong>Phurinat</strong>, a 3rd-year Digital Game student at CAMT, Chiang Mai University. 
+                        I'm a <strong>Game Developer</strong> who lives for technical challenges and creative problem-solving through code and game logic.
+                    </p>
+                    <p>
+                        I love diving deep into game engines, mastering Unity, and building smooth, high-performance gameplay experiences. 
+                        I'm always eager to push my technical boundaries—whether it’s architecting complex systems or experimenting with new development methodologies.
+                    </p>
+                    <a href="#" class="btn-resume">View My Resume</a>
+                </div>
 
-                <div class="about-image">
-                    <img src="profile.jpg" alt="Phurinat's Profile Picture"> </div>
-            </div>
+                <div class="about-image">
+                    <img src="profile.jpg" alt="Phurinat's Profile Picture"> </div>
+            </div>
 
-            <div class="about-extra-container">
-                
-                <div class="extra-box profile-box">
-                    <h3>Profile</h3>
-                    <p style="line-height: 1.8; color: #555;">
-                        A passionate Gameplay Programmer with a strong foundation in C# and Unity. 
-                        Experienced in developing interactive experiences and eager to apply my technical skills 
-                        in a professional environment. Fast learner, problem-solver, and team player.
-                        </p>
-                </div>
+            <div class="about-extra-container">
+                
+                <div class="extra-box profile-box">
+                    <h3>Profile</h3>
+                    <p style="line-height: 1.8; color: #555;">
+                        A passionate Gameplay Programmer with a strong foundation in C# and Unity. 
+                        Experienced in developing interactive experiences and eager to apply my technical skills 
+                        in a professional environment. Fast learner, problem-solver, and team player.
+                        </p>
+                </div>
 
-                <div class="extra-box skills-box">
-                    <h3>My Skills</h3>
-                    <ul class="skills-list">
-                        <li>Unity (C#)</li>
-                        <li>Unreal Engine</li>
-                        <li>Game Design</li>
-                        <li>Firebase</li>
-                        <li>Multiplayer</li>
-                        </ul>
-                </div>
+                <div class="extra-box skills-box">
+                    <h3>My Skills</h3>
+                    <ul class="skills-list">
+                        <li>Unity (C#)</li>
+                        <li>Unreal Engine</li>
+                        <li>Game Design</li>
+                        <li>Firebase</li>
+                        <li>Multiplayer</li>
+                        </ul>
+                </div>
 
-            </div>
-        </section>
+            </div>
+        </section>
 
-        <section id="projects">
-            <h2 class="section-title">My Projects</h2>
-            <p class="section-subtitle">Here are some of the games and prototypes I've worked on.</p>
-            
-            <div class="project-grid">
-    <div class="project-card" onclick="openModal('modal-fart-life')">
-        <img src="fart-life-thumbnail.jpg" alt="FartLife">
-        <div class="project-card-content">
-            <h3>FartLife</h3>
-            <p>Arcade - Unity (C#)</p>
-        </div>
-    </div>
+        <section id="projects">
+            <h2 class="section-title">My Projects</h2>
+            <p class="section-subtitle">Here are some of the games and prototypes I've worked on.</p>
+            
+            <div class="project-grid">
+    <div class="project-card" onclick="openModal('modal-fart-life')">
+        <img src="fart-life-thumbnail.jpg" alt="FartLife">
+        <div class="project-card-content">
+            <h3>FartLife</h3>
+            <p>Arcade - Unity (C#)</p>
+        </div>
+    </div>
 </div>
 
 <div id="modal-fart-life" class="modal">
-    <div class="modal-content">
-        <span class="close-btn" onclick="closeModal('modal-fart-life')">&times;</span>
-        
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/JeVBt3HOPZs" allowfullscreen></iframe>
-        </div>
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-fart-life')">&times;</span>
+        
+        <h2 class="modal-title">FartLife (2026)</h2>
+        
+        <div class="video-container">
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/JeVBt3HOPZs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
 
-        <div class="modal-details-container">
-            <h2 class="modal-title">FartLife (2026)</h2>
-            <p><strong>Survive the stink!</strong> Maneuver through a crowded elevator and reach your office floor before the office workers' various levels of farts take you out.</p>
-            
-            <ul style="margin-bottom: 20px;">
-                <li>Elevator System</li>
-                <li>AI Farting</li>
-                <li>Mask & Stamina System</li>
-            </ul>
+        <div class="modal-details">
+            <p><strong>Survive the stink! Maneuver through a crowded elevator and reach your office floor before the office workers' various levels of farts take you out. A hilarious yet challenging survival experience.</p>
+            <ul>
+                <li>Elevator System</li>
+                <li>AI Farting</li>
+                <li>Mask&Stamina System</li>
+            </ul>
+        </div>
 
-            <div class="tech-tags">
-                <span class="tag">Unity</span>
-                <span class="tag">Lead Programmer</span>
-            </div>
-            
-            <a href="https://github.com/MeePhu69/FartLife.git" target="_blank" class="btn-github">Explore the project on GitHub</a>
-        </div>
-    </div>
+        <div class="modal-footer">
+            <div class="tech-tags">
+                <span class="tag">Unity</span>
+                <span class="tag">Lead Programmer</span>
+            </div>
+            <a href="https://github.com/MeePhu69/FartLife.git" target="_blank" class="btn-github">Explore the project on GitHub</a>
+        </div>
+    </div>
 </div>
-        </section>
+        </section>
 
-        <section id="contact">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-links">
-                <a href="mailto:phurinat_watt@cmu.ac.th">Email</a>
-                <a href="https://github.com/MeePhu69" target="_blank">GitHub</a>
-                <a href="#" target="_blank">LinkedIn</a>
-            </div>
-        </section>
+        <section id="contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-links">
+                <a href="mailto:phurinat_watt@cmu.ac.th">Email</a>
+                <a href="https://github.com/MeePhu69" target="_blank">GitHub</a>
+                <a href="#" target="_blank">LinkedIn</a>
+            </div>
+        </section>
 
-    </main>
+    </main>
 
-    <script>
-    function openModal(modalId) {
-        document.getElementById(modalId).style.display = "block";
-        document.body.style.overflow = "hidden"; // ปิดการเลื่อนหน้าจอหลัก
-    }
+    <script>
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = "block";
+        document.body.style.overflow = "hidden"; // ปิดการเลื่อนหน้าจอหลัก
+    }
 
-    function closeModal(modalId) {
-        document.getElementById(modalId).style.display = "none";
-        document.body.style.overflow = "auto"; // เปิดการเลื่อนหน้าจอปกติ
-    }
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+        document.body.style.overflow = "auto"; // เปิดการเลื่อนหน้าจอปกติ
+    }
 
-    // ปิด Modal เมื่อคลิกพื้นที่ด้านนอกหน้าต่าง
-    window.onclick = function(event) {
-        if (event.target.className === 'modal') {
-            event.target.style.display = "none";
-            document.body.style.overflow = "auto";
-        }
-    }
+    // ปิด Modal เมื่อคลิกพื้นที่ด้านนอกหน้าต่าง
+    window.onclick = function(event) {
+        if (event.target.className === 'modal') {
+            event.target.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    }
 </script>
 
 </body>
 </html>
+
+ปรับตรงไหน
