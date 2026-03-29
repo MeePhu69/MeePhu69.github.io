@@ -275,21 +275,43 @@
             <p class="section-subtitle">Here are some of the games and prototypes I've worked on.</p>
             
             <div class="project-grid">
-                <div class="project-card">
-                    <img src="https://via.placeholder.com/400x200?text=Let+Him+Cook" alt="Let Him Cook Gameplay">
-                    <div class="project-card-content">
-                        <h3>Let Him Cook</h3>
-                        <p>An adventure cooking game made with Unity. Focused on inventory systems and crafting mechanics.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="https://via.placeholder.com/400x200?text=Game+Prototype+2" alt="Project 2 Thumbnail">
-                    <div class="project-card-content">
-                        <h3>Animals Trekking</h3>
-                        <p>A casual mobile game concept featuring endless running and multiplayer elements.</p>
-                    </div>
-                </div>
-                </div>
+    <div class="project-card" onclick="openModal('modal-fart-life')">
+        <img src="fart-life-thumbnail.jpg" alt="FartLife">
+        <div class="project-card-content">
+            <h3>FartLife</h3>
+            <p>Arcade - Unity (C#)</p>
+        </div>
+    </div>
+</div>
+
+<div id="modal-fart-life" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-fart-life')">&times;</span>
+        
+        <h2 class="modal-title">FartLife (2026)</h2>
+        
+        <div class="video-container">
+            <iframe width="100%" height="400" src="https://youtu.be/JeVBt3HOPZs" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="modal-details">
+            <p><strong>Survive the stink! Maneuver through a crowded elevator and reach your office floor before the office workers' various levels of farts take you out. A hilarious yet challenging survival experience.</p>
+            <ul>
+                <li>Elevator System</li>
+                <li>AI Farting</li>
+                <li>Mask&Stamina System</li>
+            </ul>
+        </div>
+
+        <div class="modal-footer">
+            <div class="tech-tags">
+                <span class="tag">Unity</span>
+                <span class="tag">Lead Programmer</span>
+            </div>
+            <a href="https://github.com/MeePhu69/FartLife.git" target="_blank" class="btn-github">Explore the project on GitHub</a>
+        </div>
+    </div>
+</div>
         </section>
 
         <section id="contact">
