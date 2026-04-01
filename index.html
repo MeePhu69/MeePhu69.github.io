@@ -202,11 +202,76 @@
         .contact-links { display: flex; gap: 40px; margin-top: 30px; }
         .contact-links a { color: #fff; border-bottom: 1px dashed #555; }
 
-        @media (max-width: 768px) {
-            .about-main-container { flex-direction: column-reverse; text-align: center; }
-            .about-text { text-align: center; }
-            .about-extra-container { grid-template-columns: 1fr; }
-            .navbar { padding: 15px 20px; }
+        .contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.contact-sub { font-weight: bold; color: #888; letter-spacing: 2px; margin-bottom: 10px; }
+.contact-title { font-size: 2.5rem; margin-bottom: 15px; color: #111; }
+.contact-desc { color: #666; margin-bottom: 40px; }
+
+/* Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.btn-submit {
+    background: linear-gradient(90deg, #a5b4fc, #f0abfc); /* ไล่สี Gradient ตามภาพ */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn-submit:hover { opacity: 0.9; transform: translateY(-2px); }
+
+/* Info Boxes Styles */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.info-box {
+    background: #f0f7ff;
+    padding: 25px 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.info-box .icon { font-size: 1.5rem; margin-bottom: 10px; color: #6366f1; }
+.info-box h4 { font-size: 0.8rem; margin-bottom: 10px; color: #4338ca; }
+.info-box p { font-size: 0.85rem; color: #555; line-height: 1.5; margin: 0; }
+
+/* Responsive สำหรับมือถือ */
+@media (max-width: 768px) {
+    .contact-container { padding: 30px; }
+    .contact-info-grid { grid-template-columns: 1fr; }
+}
         }
     </style>
 </head>
